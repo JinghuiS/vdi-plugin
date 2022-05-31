@@ -5,16 +5,35 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "axios:dev":"pnpm -C packages/axios dev",
-    "axios:build":"pnpm -C packages/axios build",
-    "ngify:dev":"pnpm -C packages/ngify-http dev",
-    "ngify:build":"pnpm -C packages/ngify-http build",
+    "axios:dev": "pnpm -C packages/axios dev",
+    "axios:build": "pnpm -C packages/axios build",
+    "ngify:dev": "pnpm -C packages/ngify-http dev",
+    "ngify:build": "pnpm -C packages/ngify-http build",
+    "all:build": "pnpm  -C --filter './packages/**' build ",
+    "chgset:run": "changeset",
+    "chgset:version": "changeset version",
+    "rm-changelogs": "rm -rf packages/*/CHANGELOG.md",
+    "chgset": "pnpm chgset:run && pnpm chgset:version",
+    "release":"changeset publish",
     "clean": "rm -rf node_modules **/*/node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "homepage": "https://github.com/JinghuiS/vdi-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JinghuiS/vdi-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/JinghuiS/vdi-plugin/issues",
+    "email": "1292077619@qq.com"
+  },
+  "npm": {
+    "publish": false
+  },
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.22.0",
     "@release-it/conventional-changelog": "^5.0.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "@wendellhu/redi": "^0.5.0",
