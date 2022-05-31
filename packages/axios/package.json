@@ -1,0 +1,17 @@
+{
+  "name": "@vdi-plugin/axios",
+  "version": "0.0.1",
+  "description": "vdi plugin axios",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && rimraf types && tsc --build tsconfig-build.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "JinghuiS",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

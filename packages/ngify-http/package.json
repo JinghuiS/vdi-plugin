@@ -1,0 +1,17 @@
+{
+  "name": "@vdi-plugin/ngify-http",
+  "version": "0.0.1",
+  "description": "vdi plugin for ngify-http",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && rimraf types && tsc --build tsconfig-build.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JinghuiS",
+  "license": "MIT",
+  "dependencies": {
+    "@ngify/http": "^1.2.1",
+    "rxjs": "^7.5.5"
+  }
+}
