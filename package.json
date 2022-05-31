@@ -13,7 +13,7 @@
     "chgset:run": "changeset",
     "chgset:version": "changeset version",
     "rm-changelogs": "rm -rf packages/*/CHANGELOG.md",
-    "chgset": "pnpm chgset:run && pnpm chgset:version",
+    "chgset": "pnpm all:build && pnpm chgset:run && pnpm chgset:version",
     "release": "changeset publish",
     "clean": "rm -rf node_modules **/*/node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,8 +28,25 @@
     "url": "https://github.com/JinghuiS/vdi-plugin/issues",
     "email": "1292077619@qq.com"
   },
-  "npm": {
-    "publish": false
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): ${version}",
+      "tagName": "v${version}"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md",
+        "ignoreRecommendedBump": true
+      }
+    },
+    "github": {
+      "release": true,
+      "web": true
+    },
+    "npm": {
+      "publish": false
+    }
   },
   "license": "MIT",
   "devDependencies": {
