@@ -2,7 +2,7 @@
   "name": "vdi-plugin",
   "private": true,
   "author": "JinghuiS",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "scripts": {
     "axios:dev": "pnpm -C packages/axios dev",
