@@ -2,7 +2,7 @@
   "name": "vdi-plugin",
   "private": true,
   "author": "JinghuiS",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "axios:dev": "pnpm -C packages/axios dev",
@@ -14,7 +14,7 @@
     "chgset:version": "changeset version",
     "rm-changelogs": "rm -rf packages/*/CHANGELOG.md",
     "chgset": "pnpm chgset:run && pnpm chgset:version",
-    "release":"changeset publish",
+    "release": "changeset publish",
     "clean": "rm -rf node_modules **/*/node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
